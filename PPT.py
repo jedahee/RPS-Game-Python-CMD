@@ -10,39 +10,39 @@ while contador_player < 3 and contador_cpu < 3:
     lista_opc = ["piedra", "papel", "tijeras"]
     elegir_opc = random.choice(lista_opc)
     
-    opc = str(input("Piedra(Rock, R), papel(Paper, P) o tijeras(Scissors, S)... > "))
+    opc = str(input("Piedra(R), papel(P) o tijeras(S)... > "))
     opc = opc.lower()
     
     #Hace todas las comparaciones cuanto tu eliges piedra
-    if opc == "piedra" or opc == "rock" or opc == "r" and elegir_opc == "tijeras":
+    if opc == "r" and elegir_opc == "tijeras":
         contador_player += 1
     
-    elif opc == "piedra" or opc == "rock" or opc == "r" and elegir_opc == "papel":
+    elif opc == "r" and elegir_opc == "papel":
         contador_cpu += 1
     
-    elif opc == "piedra" or opc == "rock" or opc == "r" and elegir_opc == "piedra":
+    elif opc == "r" and elegir_opc == "piedra":
         pass
     
 
     #Hace todas las comparaciones cuanto tu eliges papel
-    elif opc == "papel" or opc == "paper" or opc == "p" and elegir_opc == "piedra":
+    elif opc == "p" and elegir_opc == "piedra":
         contador_player += 1
     
-    elif opc == "papel" or opc == "paper" or opc == "p" and elegir_opc == "tijeras":
+    elif opc == "p" and elegir_opc == "tijeras":
         contador_cpu += 1
     
-    elif opc == "papel" or opc == "paper" or opc == "p" and elegir_opc == "papel":
+    elif opc == "p" and elegir_opc == "papel":
         pass
     
 
     #Hace todas las comparaciones cuanto tu eliges tijeras
-    elif opc == "tijeras" or opc == "scissors" or opc == "s" and elegir_opc == "papel":
+    elif opc == "s" and elegir_opc == "papel":
         contador_player += 1
     
-    elif opc == "tijeras" or opc == "scissors" or opc == "s" and elegir_opc == "piedra":
+    elif opc == "s" and elegir_opc == "piedra":
         contador_cpu += 1
     
-    elif opc == "tijeras" or opc == "scissors" or opc == "s" and elegir_opc == "tijeras":
+    elif opc == "s" and elegir_opc == "tijeras":
         pass
 
     opc = opc.capitalize()
